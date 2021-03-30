@@ -1,0 +1,83 @@
+/* ./your-css-folder/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@screen lg {
+    
+    }
+
+    @media (min-width:1025px) {
+        @layer components {
+            .btn {
+                @apply rounded shadow py-2 px-4;
+            }
+    
+            .header-container {
+                @apply px-24 py-2 shadow;
+            }
+    
+            .nav-container {
+                @apply px-4 flex items-center justify-between;
+    
+            }
+    
+            .menu {
+                @apply hover:bg-gray-200 border-none hidden;
+            }
+    
+            .nav-item-container {
+                @apply py-2;
+            }
+    
+            .nav-item {
+    
+                @apply px-4 py-2;
+            }
+    
+            .nav-btn {
+                @apply inline text-2xl hover:bg-primary rounded px-4 py-2;
+            }
+    }
+
+
+
+
+
+    @media (min-width: 280px) {
+        @layer components {
+
+            .header-container {
+
+                @apply px-12 relative;
+
+            }
+
+            .nav-container {
+                @apply px-4 flex items-center justify-between;
+
+            }
+
+            .menu {
+
+                @apply hover:bg-gray-200 border-none block;
+            }
+
+            .nav-item-container {
+                @apply py-4 px-2 w-full hidden absolute top-full left-0;
+            }
+
+            .nav-item {
+                @apply w-full py-2 px-4;
+            }
+
+            .nav-btn {
+                @apply block text-2xl hover:bg-primary rounded;
+            }
+
+
+
+        }
+    }
+}
